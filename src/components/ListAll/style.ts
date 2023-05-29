@@ -65,6 +65,7 @@ export const Card = styled.li`
   position: relative;
   margin-bottom: 1.5rem;
   max-width: 200px;
+  max-height: 400px;
   background-image: url(${portal});
   background-color: var(--brand3);
   background-size: 100% 100%;
