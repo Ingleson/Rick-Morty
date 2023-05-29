@@ -23,29 +23,3 @@ interface ILocationChar {
 interface IEpisodeChar {
   url: string
 }
-
-export interface ILocation {
-  id: string
-  created: string
-  name: string
-  dimension: string
-  residents: IResidentLoc[]
-  type: string
-  url: string
-}
-interface IResidentLoc {
-  url: string
-}
-
-export interface IEpisode {
-  id: string
-  name: string
-  created: string
-  characters: ICharacterEpis[] 
-  air_date: string
-  episode: string
-  url: string
-}
-interface ICharacterEpis {
-  url: string
-}
