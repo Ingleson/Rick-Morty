@@ -16,7 +16,7 @@ export const ContainerListChar = styled.div`
 
     button {
       background-color: var(--brand2);
-      border: 1.5px solid var(--brand2);
+      border: 1.5px solid var(--white); 
       border-radius: 5px;
       padding: 10px 20px;
       font-size: 1rem;
