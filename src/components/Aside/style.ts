@@ -7,4 +7,9 @@ export const ContainerNav = styled.aside`
   display: flex;
   flex-direction: column;
   border-right: 1.5px solid var(--white);
+
+  @media (max-width: 800px) {
+    width: 100%;
+    max-height: 160px;
+  }
 `
