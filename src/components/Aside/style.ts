@@ -11,5 +11,6 @@ export const ContainerNav = styled.aside`
   @media (max-width: 800px) {
     width: 100%;
     max-height: 160px;
+    border-right: none;
   }
 `

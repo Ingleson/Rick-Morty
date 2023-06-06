@@ -60,22 +60,37 @@ export const ContainerListChar = styled.div`
 
 `
 export const Card = styled.li`
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  perspective: 1000px;
   margin-bottom: 1.5rem;
-  max-width: 200px;
-  max-height: 400px;
+  width: 200px;
+  height: 250px;
+  border: 1.5px solid var(--white);
   background-image: url(${portal});
-  background-color: var(--brand3);
   background-size: 100% 100%;
-  border: 1px solid var(--white);
 
-  figure {
+  :hover {
+    .flipper {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .flipper {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
     position: relative;
-    width: 200px;
-    height: 10rem;
-    
+  }
+
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  .front {
+
     span {
       position: absolute;
       text-shadow: 2px -2px 10px var(--brand4);
@@ -85,16 +100,19 @@ export const Card = styled.li`
       -webkit-text-stroke: 1px var(--black);
     }
     img {
-      width: 99%;
+      width: 100%;
       height: 100%;
     }
   }
-  .info-box {
-    max-height: 250px;
-    padding: 15px 0 10px 5px;
+  .back { 
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    padding: 15px 0 10px 5px;
+    gap: 15px;
+    transform: rotateY(180deg); 
+    background-image: url(${portal});
+    background-color: var(--brand3);
+    background-size: 100% 100%;
 
     p {
       color: var(--black);
