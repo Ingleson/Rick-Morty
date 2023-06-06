@@ -23,17 +23,19 @@ const ListChar = () => {
         {
           char?.map((el) => (
             <Card key={el.id} title={el.name}>
-              <figure>
-                <span>{el.name}</span>
-                <img src={el.image} alt={el.name} />
-              </figure>
-              <div className='info-box'>
-                <p><span>gênero:</span> {el.gender}</p>
-                <p><span>espécie:</span> {el.species}</p>
-                <p><span>localização:</span> {el.location.name}</p>
-                <p><span>origem:</span> {el.origin.name}</p>
-                <p><span>status:</span> {el.status}</p>
-                <p><span>tipo:</span> {el.type === '' ? '? ? ?' : el.type}</p>
+              <div className='flipper'>
+                <figure className='front'>
+                  <span>{el.name}</span>
+                  <img src={el.image} alt={el.name} />
+                </figure>
+                <article className='back'>
+                  <p><span>gênero:</span> {el.gender}</p>
+                  <p><span>espécie:</span> {el.species}</p>
+                  <p><span>localização:</span> {el.location.name}</p>
+                  <p><span>origem:</span> {el.origin.name}</p>
+                  <p><span>status:</span> {el.status}</p>
+                  <p><span>tipo:</span> {el.type === '' ? '? ? ?' : el.type}</p>
+                </article>
               </div>
             </Card>
           ))
